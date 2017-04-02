@@ -44,7 +44,7 @@ voter_schema = [
 ]
 voter_df = pd.read_fwf('./entire_state_v.lst',
                         colspecs=[ (r[1]-1, r[1]+r[2]-1) for r in voter_schema ],
-                        names=[ r[0] for r in voter_schema]
+                        names=[ r[0] for r in voter_schema ]
                       )
 voter_df.to_csv('entire_state_v.csv', index=False)
 
@@ -59,7 +59,7 @@ history_schema = [
 ]
 history_df = pd.read_fwf('./entire_state_h.lst',
                         colspecs=[ (r[1]-1, r[1]+r[2]-1) for r in history_schema ],
-                        names=[ r[0] for r in history_schema]
+                        names=[ r[0] for r in history_schema ]
                       )
 history_df.to_csv('entire_state_h.csv', index=False)
 
@@ -70,7 +70,7 @@ county_schema = [
 ]
 county_df = pd.read_fwf('./countycd.lst',
                         colspecs=[ (r[1]-1, r[1]+r[2]-1) for r in county_schema ],
-                        names=[ r[0] for r in county_schema]
+                        names=[ r[0] for r in county_schema ]
                       )
 county_df.to_csv('countycd.csv', index=False)
 
@@ -82,7 +82,7 @@ elections_schema = [
 ]
 elections_df = pd.read_fwf('./electionscd.lst',
                         colspecs=[ (r[1]-1, r[1]+r[2]-1) for r in elections_schema ],
-                        names=[ r[0] for r in elections_schema]
+                        names=[ r[0] for r in elections_schema ]
                       )
 elections_df.to_csv('electionscd.csv', index=False)
 
@@ -95,7 +95,7 @@ juris_schema = [
 ]
 juris_df = pd.read_fwf('./juriscd.lst',
                         colspecs=[ (r[1]-1, r[1]+r[2]-1) for r in juris_schema ],
-                        names=[ r[0] for r in juris_schema]
+                        names=[ r[0] for r in juris_schema ]
                       )
 juris_df.to_csv('juriscd.csv', index=False)
 
@@ -109,7 +109,7 @@ school_schema = [
 ]
 school_df = pd.read_fwf('./schoolcd.lst',
                         colspecs=[ (r[1]-1, r[1]+r[2]-1) for r in school_schema ],
-                        names=[ r[0] for r in school_schema]
+                        names=[ r[0] for r in school_schema ]
                       )
 school_df.to_csv('schoolcd.csv', index=False)
 
@@ -124,7 +124,7 @@ village_schema = [
 ]
 village_df = pd.read_fwf('./villagecd.lst',
                         colspecs=[ (r[1]-1, r[1]+r[2]-1) for r in village_schema ],
-                        names=[ r[0] for r in village_schema]
+                        names=[ r[0] for r in village_schema ]
                       )
 village_df.to_csv('villagecd.csv', index=False)
 
