@@ -18,3 +18,9 @@ This also gets people that live on a `DETROIT ST` (or have `DETROIT` in their na
 `delete from voters where jurisdiction not in ('22000');`
 
 once it's in Postgres.
+
+### 01_extract.py
+
+Creates a `.csv` for each `.lst` file via loading into `pandas` using `read_fwf` (fixed width format.)
+
+Additionally, can insert those .csv into Postgres using `odo`.
