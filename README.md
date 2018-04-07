@@ -24,3 +24,18 @@ once it's in Postgres.
 Creates a `.csv` for each `.lst` file via loading into `pandas` using `read_fwf` (fixed width format.)
 
 Additionally, can insert those .csv into Postgres using `odo`.
+
+
+### a better way to convert to csv
+
+Use `gawk` (gnu awk) to do this line by line...
+
+```
+gawk '$1=$1' FIELDWIDTHS='35 20 20 3 4 1 8 1 7 4 2 30 6 2 13 35 2 5 50 50 50 50 50 13 2 5 6 5 5 5 5 5 5 6 6 1 2 1' OFS=, entire_state_v.lst > entire_state_v.csv
+```
+
+Remove whitespace from .csv...
+
+```
+sed -e 's/  \+//g' entire_state_h.csv | sed -e 's/ \+,/,/g' > entire_state_h_trimmed.csv
+```
